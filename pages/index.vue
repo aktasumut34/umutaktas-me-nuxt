@@ -14,7 +14,7 @@
             class="bg-gradient-to-r from-pink-600 to-yellow-400 bg-clip-text text-transparent"
             >online</span
           >
-          personal helper
+          personal trainer
         </h3>
         <p
           class="font-sofia text-3xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
