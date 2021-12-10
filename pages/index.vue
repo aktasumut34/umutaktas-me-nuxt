@@ -53,7 +53,9 @@
       </div>
     </div>
     <hr />
-    <div class="py-8 flex flex-col gap-12 items-center justify-center">
+    <div
+      class="py-8 mx-4 md:mx-8 xl:mx-32 2xl:mx-64 flex flex-col gap-12 items-center justify-center"
+    >
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending">
           <h3
@@ -80,7 +82,10 @@
           </div>
         </div>
       </div>
-      <div v-if="!articles.error" class="grid grid-cols-2 gap-8 w-full">
+      <div
+        v-if="!articles.error"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full"
+      >
         <PostCard
           v-for="post in articles"
           :key="post._id"
@@ -103,7 +108,9 @@
       </div>
     </div>
     <hr />
-    <div class="py-8 flex flex-col gap-12 items-center justify-center">
+    <div
+      class="py-8 mx-4 md:mx-8 xl:mx-32 2xl:mx-64 flex flex-col gap-12 items-center justify-center"
+    >
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending">
           <h3
@@ -131,9 +138,12 @@
         </div>
       </div>
 
-      <div v-if="!articles.error" class="grid grid-cols-2 gap-8 w-full">
+      <div
+        v-if="!projects.error"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full"
+      >
         <PostCard
-          v-for="post in articles"
+          v-for="post in projects"
           :key="post._id"
           :image="post.image"
           :title="post.name"
@@ -146,9 +156,65 @@
         <h3
           class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load posts now. Shame on us 🙁<br /><small
+          Sorry, we couldn't load latest projects now. Shame on us 🙁<br /><small
             class="text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ articles.error.code }}</small
+            >ERROR CODE: {{ projects.error.code }}</small
+          >
+        </h3>
+      </div>
+    </div>
+    <hr />
+    <div
+      class="py-8 mx-4 md:mx-8 xl:mx-32 2xl:mx-64 flex flex-col gap-12 items-center justify-center"
+    >
+      <div class="flex flex-col gap-6 items-center justify-center">
+        <template v-if="!$fetchState.pending">
+          <h3
+            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+          >
+            New To Development?
+          </h3>
+          <p
+            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+          >
+            Learn The Basics First.
+          </p>
+        </template>
+        <div v-else>
+          <h3
+            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+          >
+            LOADING LATEST PROJECTS
+          </h3>
+          <div class="spinner">
+            <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
+            <div class="bounce2 bg-gray-700 dark:bg-gray-300"></div>
+            <div class="bounce3 bg-gray-700 dark:bg-gray-300"></div>
+          </div>
+        </div>
+      </div>
+
+      <div
+        v-if="!basics.error"
+        class="grid grid-cols-1 lg:grid-cols-2 gap-8 w-full"
+      >
+        <PostCard
+          v-for="post in basics"
+          :key="post._id"
+          :image="post.image"
+          :title="post.name"
+          :description="post.content"
+          :tags="post.tags"
+          class="w-full"
+        />
+      </div>
+      <div v-else class="w-full">
+        <h3
+          class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+        >
+          Sorry, we couldn't load latest projects now. Shame on us 🙁<br /><small
+            class="text-xs text-gray-700 dark:text-gray-300"
+            >ERROR CODE: {{ basics.error.code }}</small
           >
         </h3>
       </div>
@@ -161,20 +227,52 @@ export default {
   data() {
     return {
       articles: [],
-      meta: {},
+      articlesMeta: {},
+      projects: [],
+      projectsMeta: {},
+      basics: [],
+      basicsMeta: {},
     }
   },
   async fetch() {
     await this.fetchPosts()
+    await this.fetchProjects()
+    await this.fetchBasics()
   },
   methods: {
     async fetchPosts() {
       try {
-        const res = await this.$axios.get('/articles?page=1')
-        this.articles = res.data.articles
-        this.meta = res.data.meta
+        const articleRes = await this.$axios.get('/articles?limit=2&sort=desc')
+        this.articles = articleRes.data.articles
+        this.articlesMeta = articleRes.data.meta
       } catch (err) {
         this.articles = {
+          error: err,
+        }
+      }
+    },
+    async fetchProjects() {
+      try {
+        const projectRes = await this.$axios.get(
+          '/articles?limit=2&sort=desc&tag=project'
+        )
+        this.projects = projectRes.data.articles
+        this.projectsMeta = projectRes.data.meta
+      } catch (err) {
+        this.projects = {
+          error: err,
+        }
+      }
+    },
+    async fetchBasics() {
+      try {
+        const basicRes = await this.$axios.get(
+          '/articles?limit=2&sort=desc&tag=basic'
+        )
+        this.basics = basicRes.data.articles
+        this.basicsMeta = basicRes.data.meta
+      } catch (err) {
+        this.basics = {
           error: err,
         }
       }

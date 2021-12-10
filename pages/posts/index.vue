@@ -8,21 +8,12 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            Latest<code
-              :to="'/tags/' + meta.tag.slug"
-              class="px-4 py-1 font-cubano uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md mx-2"
-              :style="{
-                backgroundColor: meta.tag.background || 'black',
-                color: meta.tag.foreground || 'white',
-              }"
-            >
-              {{ meta.tag.name }} </code
-            >Posts
+            Latest Posts
           </h3>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
-            {{ meta.tag.description }}
+            New posts, updated every 32nd day of month
           </p>
         </template>
         <div v-if="$fetchState.pending && !articles.error">
@@ -144,10 +135,7 @@ export default {
       try {
         this.curPage = parseInt(this.$route.query.page) || 1
         const res = await this.$axios.get(
-          '/articles?limit=4&page=' +
-            this.curPage +
-            '&tag=' +
-            this.$route.params.tag
+          '/articles?limit=4&page=' + this.curPage
         )
         this.articles = res.data.articles
         this.meta = res.data.meta

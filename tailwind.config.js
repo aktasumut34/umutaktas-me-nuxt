@@ -12,6 +12,9 @@ module.exports = {
   }, // or 'media' or 'class'
   theme: {
     extend: {
+      screens: {
+        '3xl': '1920px',
+      },
       colors: {
         darkGray: '#2A2E35',
       },
