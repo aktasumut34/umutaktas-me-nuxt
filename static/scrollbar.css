@@ -1,0 +1,28 @@
+/* Works on Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #12181b #dbe1e8;
+}
+*.dark {
+  scrollbar-color: #dbe1e8 #12181b;
+}
+
+*::-webkit-scrollbar-track {
+  background: #12181b;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #dbe1e8;
+  border-radius: 20px;
+  border: 3px solid #12181b;
+}
+
+*.dark::-webkit-scrollbar-track {
+  background: #dbe1e8;
+}
+
+*::-webkit-scrollbar-thumb {
+  background-color: #12181b;
+  border-radius: 20px;
+  border: 3px solid #dbe1e8;
+}

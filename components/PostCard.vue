@@ -1,5 +1,6 @@
 <template>
-  <div
+  <NuxtLink
+    :to="'/posts/' + slug"
     class="rounded px-6 py-8 flex flex-col items-center dark:bg-darkGray bg-white gap-4 hover:-translate-y-1 transition-transform"
   >
     <img :src="image" alt="" class="w-full ar object-cover" />
@@ -31,7 +32,7 @@
         {{ tag.name }}
       </div>
     </div>
-  </div>
+  </NuxtLink>
 </template>
 
 <script>
@@ -56,6 +57,10 @@ export default {
     tags: {
       type: Array,
       default: () => [],
+    },
+    slug: {
+      type: String,
+      default: '?',
     },
   },
   computed: {

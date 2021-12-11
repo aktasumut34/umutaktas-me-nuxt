@@ -14,13 +14,14 @@ export default {
     link: [
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/spinner.css' },
+      { rel: 'stylesheet', href: '/scrollbar.css' },
       { rel: 'stylesheet', href: 'https://use.typekit.net/iit5iam.css' },
     ],
     script: [{ hid: 'darkMode', src: '/dark-mode.js' }],
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: [],
+  css: [{ src: '~/node_modules/highlight.js/styles/monokai.css', lang: 'css' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
@@ -40,6 +41,7 @@ export default {
   modules: [
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
+    '@nuxtjs/markdownit',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -52,6 +54,16 @@ export default {
         'Access-Control-Allow-Origin': '*',
       },
     },
+  },
+  markdownit: {
+    runtime: true, // Support `$md()`
+    injected: true,
+    preset: 'default',
+    linkify: true,
+    breaks: true,
+    typographer: true,
+    html: false,
+    use: ['markdown-it-highlightjs', 'markdown-it-attrs'],
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build

@@ -91,8 +91,9 @@
           :key="post._id"
           :image="post.image"
           :title="post.name"
-          :description="post.content"
+          :description="post.description"
           :tags="post.tags"
+          :slug="post.slug"
           class="w-full"
         />
       </div>
@@ -147,8 +148,9 @@
           :key="post._id"
           :image="post.image"
           :title="post.name"
-          :description="post.content"
+          :description="post.description"
           :tags="post.tags"
+          :slug="post.slug"
           class="w-full"
         />
       </div>
@@ -203,8 +205,9 @@
           :key="post._id"
           :image="post.image"
           :title="post.name"
-          :description="post.content"
+          :description="post.description"
           :tags="post.tags"
+          :slug="post.slug"
           class="w-full"
         />
       </div>
@@ -217,6 +220,34 @@
             >ERROR CODE: {{ basics.error.code }}</small
           >
         </h3>
+      </div>
+    </div>
+    <hr />
+    <div
+      class="py-10 md:py-16 lg:py-36 flex flex-col md:flex-row gap-6 items-stretch justify-between"
+    >
+      <div class="flex justify-center md:justify-start">
+        <img src="//unsplash.it/300/300" alt="" class="rounded-full" />
+      </div>
+      <div
+        class="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center md:justify-start gap-6"
+      >
+        <h3
+          class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
+        >
+          🎙️ Your Host
+        </h3>
+        <p
+          class="font-sofia text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
+        >
+          Hi, I'm
+          <code
+            class="font-bold bg-gradient-to-r from-pink-600 to-yellow-400 px-1 rounded-sm inline-block text-[1.05em] text-white"
+            >Umut Aktaş</code
+          >
+          and I'm 26 right now. My biggest passion is coding and i like teaching
+          what i know.
+        </p>
       </div>
     </div>
   </div>

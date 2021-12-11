@@ -45,7 +45,9 @@
             :key="post._id"
             :image="post.image"
             :title="post.name"
-            :description="post.content"
+            :description="post.description"
+            :tags="post.tags"
+            :slug="post.slug"
             class="w-full"
           />
         </div>
@@ -101,7 +103,7 @@
       </template>
       <div v-if="articles.error" class="w-full">
         <span
-          class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
           Sorry, we couldn't load posts now. Shame on us 🙁
           <small

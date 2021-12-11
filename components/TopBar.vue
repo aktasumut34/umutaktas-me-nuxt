@@ -1,11 +1,12 @@
 <template>
   <div>
     <div
-      class="absolute h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center bg-yellow-600 transition-transform duration-500"
+      class="absolute h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-500 searchContainer"
       :class="{
         'translate-y-[-100vh]': !searchActive,
         'translate-y-0': searchActive,
       }"
+      @keydown.esc="toggleSearch"
     >
       <div
         class="absolute right-5 top-5 text-white hover:text-gray-200 active:text-gray-100 cursor-pointer"
@@ -32,9 +33,11 @@
         type="text"
         class="flex-1 bg-transparent outline-none text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gray-100 placeholder-gray-300"
         placeholder="Search something"
+        @keydown.enter="doSearch"
       />
       <div
         class="text-white hover:text-gray-200 active:text-gray-100 cursor-pointer"
+        @click="doSearch"
       >
         <svg
           xmlns="http://www.w3.org/2000/svg"
@@ -108,7 +111,7 @@
             />
           </svg>
           <svg
-            v-else
+            v-if="currentMode == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
             class="h-9 w-9"
             fill="none"
@@ -148,9 +151,19 @@
 export default {
   data() {
     return {
-      currentMode: 'light',
+      currentMode: 'dark',
       searchActive: false,
       query: '',
+    }
+  },
+  created() {
+    // eslint-disable-next-line nuxt/no-env-in-hooks
+    if (process.client) {
+      // eslint-disable-next-line no-undef
+      if (_MODE) {
+        // eslint-disable-next-line no-undef
+        this.currentMode = _MODE
+      }
     }
   },
   methods: {
@@ -175,6 +188,13 @@ export default {
       this.searchActive = !this.searchActive
       if (this.searchActive) this.$refs.search.focus()
     },
+    doSearch() {
+      this.searchActive = false
+      this.$router.push({
+        path: '/posts',
+        query: { s: this.query },
+      })
+    },
   },
 }
 </script>
@@ -185,5 +205,8 @@ export default {
 }
 .nuxt-link-active {
   @apply text-gray-900 dark:text-gray-100;
+}
+.searchContainer {
+  background: rgba(0, 0, 0, 0.85);
 }
 </style>
