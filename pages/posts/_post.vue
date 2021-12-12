@@ -1,4 +1,3 @@
-<!-- eslint-disable vue/no-v-html -->
 <template>
   <div class="px-10 md:px-16 lg:px-36 transition-colors">
     <div
