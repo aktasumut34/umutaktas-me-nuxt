@@ -167,22 +167,21 @@ export default {
     }
   },
   methods: {
-    swapMode() {
-      if (
-        localStorage.theme === 'dark' ||
-        (!('theme' in localStorage) &&
-          window.matchMedia('(prefers-color-scheme: dark)').matches)
-      ) {
+    swapMode(mode) {
+      if (mode === 'dark') {
         document.documentElement.classList.add('dark')
-        this.currentMode = 'dark'
       } else {
         document.documentElement.classList.remove('dark')
-        this.currentMode = 'light'
       }
+      localStorage.theme = mode
+      this.currentMode = mode
     },
     darkMode() {
-      localStorage.theme = localStorage.theme === 'dark' ? 'light' : 'dark'
-      this.swapMode()
+      const mode =
+        localStorage.theme === 'dark' || window._MODE === 'dark'
+          ? 'light'
+          : 'dark'
+      this.swapMode(mode)
     },
     toggleSearch() {
       this.searchActive = !this.searchActive

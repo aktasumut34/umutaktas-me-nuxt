@@ -1,9 +1,10 @@
 <template>
-  <NuxtLink
-    :to="'/posts/' + slug"
+  <div
     class="rounded px-6 py-8 flex flex-col items-center dark:bg-darkGray bg-white gap-4 hover:-translate-y-1 transition-transform"
   >
-    <img :src="image" alt="" class="w-full ar object-cover" />
+    <NuxtLink class="w-full" :to="'/posts/' + slug">
+      <img :src="image" alt="" class="w-full ar object-cover"
+    /></NuxtLink>
     <h3
       class="font-cubano uppercase text-xl md:text-3xl text-black dark:text-white text-center"
     >
@@ -14,15 +15,17 @@
     >
       {{ striphtml(description) }}
     </p>
-    <button
-      class="bg-green-500 text-white rounded-sm py-4 font-sofia hover:bg-green-600 text-sm uppercase transition-colors hover:text-gray-300 w-full mt-auto"
+    <NuxtLink
+      :to="'/posts/' + slug"
+      class="text-center bg-green-500 text-white rounded-sm py-4 font-sofia hover:bg-green-600 text-sm uppercase transition-colors hover:text-gray-300 w-full mt-auto"
     >
       {{ buttonText }}
-    </button>
+    </NuxtLink>
     <div v-if="cTags.length" class="flex gap-1 flex-wrap self-start">
-      <div
+      <NuxtLink
         v-for="tag in cTags"
         :key="tag.slug"
+        :to="'/tags/' + tag.slug"
         class="px-2 py-1 font-cubano uppercase text-sm"
         :style="{
           backgroundColor: tag.background || 'black',
@@ -30,9 +33,9 @@
         }"
       >
         {{ tag.name }}
-      </div>
+      </NuxtLink>
     </div>
-  </NuxtLink>
+  </div>
 </template>
 
 <script>
@@ -52,7 +55,7 @@ export default {
     },
     buttonText: {
       type: String,
-      default: 'START',
+      default: 'READ MORE',
     },
     tags: {
       type: Array,

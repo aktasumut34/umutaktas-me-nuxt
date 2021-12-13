@@ -224,13 +224,13 @@
     </div>
     <hr />
     <div
-      class="py-10 md:py-16 lg:py-36 flex flex-col md:flex-row gap-6 items-stretch justify-between"
+      class="py-10 md:py-16 lg:py-36 px-10 md:px-14 lg:px-20 xl:px-32 2xl:px-40 flex flex-col lg:flex-row gap-6 items-stretch justify-evenly"
     >
-      <div class="flex justify-center md:justify-start">
+      <div class="flex justify-center">
         <img src="//unsplash.it/300/300" alt="" class="rounded-full" />
       </div>
       <div
-        class="w-full md:w-1/2 flex flex-col items-center md:items-start justify-center md:justify-start gap-6"
+        class="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center lg:justify-start gap-6"
       >
         <h3
           class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
