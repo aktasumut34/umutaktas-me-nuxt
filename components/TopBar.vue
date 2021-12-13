@@ -64,7 +64,7 @@
       >
         <img
           class="w-logoWidth h-logoWidth md:w-logoWidthMd md:h-logoWidthMd"
-          src="//unsplash.it/128/128"
+          src="//unsplash.it/256/256"
           alt="umutaktas.me logo"
         />
       </NuxtLink>
