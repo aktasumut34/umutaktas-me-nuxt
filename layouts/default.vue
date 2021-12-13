@@ -2,8 +2,6 @@
   <div>
     <TopBar />
     <Nuxt
-      keep-alive
-      :keep-alive-props="{ exclude: ['pages/tags/_tag.vue'] }"
       class="mt-navWidth md:mt-navWidthMd bg-[#DBE1E8] dark:bg-[#12181B] transition-colors bodyHeight"
     />
   </div>

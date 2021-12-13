@@ -96,7 +96,7 @@
         </div>
         <div class="nav-text" @click="darkMode">
           <svg
-            v-if="currentMode == 'light'"
+            v-show="currentMode == 'light'"
             xmlns="http://www.w3.org/2000/svg"
             class="h-9 w-9"
             fill="none"
@@ -111,7 +111,7 @@
             />
           </svg>
           <svg
-            v-if="currentMode == 'dark'"
+            v-show="currentMode == 'dark'"
             xmlns="http://www.w3.org/2000/svg"
             class="h-9 w-9"
             fill="none"

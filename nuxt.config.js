@@ -50,7 +50,7 @@ export default {
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
-    baseURL: 'http://localhost:91/api',
+    baseURL: 'https://umutaktas.me/api',
     proxyHeaders: false,
     credentials: false,
     headers: {
