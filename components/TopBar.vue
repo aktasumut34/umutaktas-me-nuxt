@@ -160,7 +160,8 @@ export default {
     // eslint-disable-next-line nuxt/no-env-in-hooks
     if (process.client) {
       // eslint-disable-next-line no-undef
-      if (_MODE) {
+      // eslint-disable-next-line nuxt/no-globals-in-created
+      if (window._MODE) {
         // eslint-disable-next-line no-undef
         this.currentMode = _MODE
       }
@@ -177,10 +178,7 @@ export default {
       this.currentMode = mode
     },
     darkMode() {
-      const mode =
-        localStorage.theme === 'dark' || window._MODE === 'dark'
-          ? 'light'
-          : 'dark'
+      const mode = this.currentMode === 'dark' ? 'light' : 'dark'
       this.swapMode(mode)
     },
     toggleSearch() {
