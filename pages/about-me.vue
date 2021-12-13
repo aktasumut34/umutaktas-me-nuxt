@@ -651,11 +651,196 @@
       </div>
     </div>
     <hr />
+    <div class="py-10 md:py-16 lg:py-36">
+      <div class="grid grid-cols-1 lg:grid-cols-2 gap-4">
+        <div class="flex items-center justify-center">
+          <img
+            v-show="currentMode === 'dark'"
+            src="/img/ranking.png"
+            class="w-72 h-72 2xl:w-80 2xl:h-80"
+          />
+          <img
+            v-show="currentMode === 'light'"
+            src="/img/ranking-light.png"
+            class="w-72 h-72 2xl:w-80 2xl:h-80"
+          />
+        </div>
+        <div class="flex flex-col gap-8">
+          <h3
+            class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+          >
+            Skills
+          </h3>
+          <div class="flex flex-col gap-3">
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-blue-700 font-medium dark:text-white"
+                    >HTML / CSS</span
+                  >
+                  <span
+                    class="text-sm font-medium text-blue-700 dark:text-white"
+                    >100%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-gray-200 rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-blue-600 h-2.5 rounded-full w-[100%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#323330] font-medium dark:text-white"
+                    >Javascript (Frontend)</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#323330] dark:text-white"
+                    >75%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-[#323330] rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-[#f0db4f] h-2.5 rounded-full w-[75%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#3C873A] font-medium dark:text-white"
+                    >Node.js</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#3C873A] dark:text-white"
+                    >70%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-[#303030] rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-[#3C873A] h-2.5 rounded-full w-[70%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#35495e] font-medium dark:text-white"
+                    >Vue.js</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#35495e] dark:text-white"
+                    >90%</span
+                  >
+                </div>
+                <div
+                  class="w-full bg-[#35495e] rounded-full h-2.5 dark:bg-gray-700"
+                >
+                  <div
+                    class="bg-[#42b883] h-2.5 rounded-full w-[90%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#787CB5] font-medium dark:text-white"
+                    >PHP</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#787CB5] dark:text-white"
+                    >70%</span
+                  >
+                </div>
+                <div class="w-full rounded-full h-2.5 bg-gray-700">
+                  <div
+                    class="bg-[#787CB5] h-2.5 rounded-full w-[70%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#F05340] font-medium dark:text-white"
+                    >Laravel</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#F05340] dark:text-white"
+                    >75%</span
+                  >
+                </div>
+                <div class="w-full rounded-full h-2.5 bg-[#6c6c6c]">
+                  <div
+                    class="bg-[#F05340] h-2.5 rounded-full w-[75%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-[#F29111] font-medium dark:text-white"
+                    >SQL</span
+                  >
+                  <span
+                    class="text-sm font-medium text-[#F29111] dark:text-white"
+                    >80%</span
+                  >
+                </div>
+                <div
+                  class="w-full rounded-full h-2.5 dark:bg-gray-700 bg-black"
+                >
+                  <div
+                    class="bg-[#F29111] h-2.5 rounded-full w-[80%]"
+                  ></div></div
+              ></span>
+            </div>
+            <div class="text-center text-black dark:text-white lg:text-left">
+              <span class="font-cubano text-2xl xl:text-3xl block">
+                <div class="mb-1 flex justify-between">
+                  <span
+                    class="text-base text-pink-600 font-medium dark:text-white"
+                    >Design</span
+                  >
+                  <span
+                    class="text-sm font-medium text-pink-600 dark:text-white"
+                    >0%</span
+                  >
+                </div>
+                <div
+                  class="w-full rounded-full h-2.5 dark:bg-gray-700 bg-black"
+                >
+                  <div class="bg-pink-600 h-2.5 rounded-full w-[0%]"></div></div
+              ></span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
-export default {}
+export default {
+  computed: {
+    currentMode() {
+      return this.$store.state.mode
+    },
+  },
+}
 </script>
 <style>
 hr {

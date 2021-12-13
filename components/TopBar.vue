@@ -132,13 +132,18 @@
 </template>
 
 <script>
+import { mapMutations } from 'vuex'
 export default {
   data() {
     return {
-      currentMode: 'dark',
       searchActive: false,
       query: '',
     }
+  },
+  computed: {
+    currentMode() {
+      return this.$store.state.mode
+    },
   },
   created() {
     // eslint-disable-next-line nuxt/no-env-in-hooks
@@ -147,7 +152,8 @@ export default {
       // eslint-disable-next-line nuxt/no-globals-in-created
       if (window._MODE) {
         // eslint-disable-next-line no-undef
-        this.currentMode = _MODE
+        this.set(_MODE)
+        // eslint-disable-next-line no-undef
       }
     }
   },
@@ -159,7 +165,7 @@ export default {
         document.documentElement.classList.remove('dark')
       }
       localStorage.theme = mode
-      this.currentMode = mode
+      this.set(mode)
     },
     darkMode() {
       const mode = this.currentMode === 'dark' ? 'light' : 'dark'
@@ -176,6 +182,7 @@ export default {
         query: { s: this.query },
       })
     },
+    ...mapMutations(['set']),
   },
 }
 </script>
