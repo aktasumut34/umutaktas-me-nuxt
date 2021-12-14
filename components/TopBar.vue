@@ -1,7 +1,7 @@
 <template>
   <div>
     <div
-      class="fixed h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-500 searchContainer"
+      class="absolute h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-500 searchContainer"
       :class="{
         'translate-y-[-100vh]': !searchActive,
         'translate-y-0': searchActive,
@@ -56,7 +56,7 @@
       </div>
     </div>
     <div
-      class="fixed h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-700 searchContainer"
+      class="absolute h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-700 searchContainer"
       :class="{
         'translate-y-[-100vh]': !menuActive,
         'translate-y-0': menuActive,
