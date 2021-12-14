@@ -55,6 +55,56 @@
         </svg>
       </div>
     </div>
+    <div
+      class="absolute h-full w-full top-0 left-0 px-8 md:px-16 xl:px-40 z-[9999] flex items-center justify-center transition-transform duration-700 searchContainer"
+      :class="{
+        'translate-y-[-100vh]': !menuActive,
+        'translate-y-0': menuActive,
+      }"
+      @keydown.esc="toggleMenu"
+    >
+      <div
+        class="absolute right-5 top-5 text-white hover:text-gray-200 active:text-gray-100 cursor-pointer"
+        @click="toggleMenu"
+      >
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          class="h-12 w-12 xl:h-20 xl:w-20"
+          fill="none"
+          viewBox="0 0 24 24"
+          stroke="currentColor"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M6 18L18 6M6 6l12 12"
+          />
+        </svg>
+      </div>
+      <div class="flex-1 flex flex-col text-center justify-center gap-6">
+        <span
+          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          @click="go('/')"
+          >🏠 HOME</span
+        >
+        <span
+          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          @click="go('/posts')"
+          >🚀 ALL POSTS</span
+        >
+        <span
+          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          @click="go('/tags')"
+          >🏷 TAGS</span
+        >
+        <span
+          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          @click="go('/about-me')"
+          >👨‍💻 ABOUT&nbsp;ME</span
+        >
+      </div>
+    </div>
     <nav
       class="fixed top-0 left-0 bg-white dark:bg-darkGray flex h-navWidth md:h-navWidthMd w-full items-center transition-colors duration-300 z-50"
     >
@@ -126,6 +176,22 @@
             />
           </svg>
         </div>
+        <div class="nav-text block md:hidden" @click="toggleMenu">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="h-9 w-9"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke="currentColor"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </div>
       </div>
     </nav>
   </div>
@@ -138,6 +204,7 @@ export default {
     return {
       searchActive: false,
       query: '',
+      menuActive: false,
     }
   },
   computed: {
@@ -153,7 +220,6 @@ export default {
       if (window._MODE) {
         // eslint-disable-next-line no-undef
         this.set(_MODE)
-        // eslint-disable-next-line no-undef
       }
     }
   },
@@ -175,11 +241,20 @@ export default {
       this.searchActive = !this.searchActive
       if (this.searchActive) this.$refs.search.focus()
     },
+    toggleMenu() {
+      this.menuActive = !this.menuActive
+    },
     doSearch() {
       this.searchActive = false
       this.$router.push({
         path: '/posts',
         query: { s: this.query },
+      })
+    },
+    go(i) {
+      this.menuActive = false
+      this.$router.push({
+        path: i,
       })
     },
     ...mapMutations(['set']),
