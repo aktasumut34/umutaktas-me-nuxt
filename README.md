@@ -4,11 +4,11 @@ Hello, this is my personal portfolio created with [Nuxt.JS](https://github.com/n
 
 ## Desktop Preview
 
-![Desktop site preview](https://imgur.com/r2AgEpa)
+![Desktop site preview](https://imgur.com/r2AgEpa.png)
 
 ## Mobile Preview
 
-![Mobile site preview](https://imgur.com/Hdx7g3h)
+![Mobile site preview](https://imgur.com/Hdx7g3h.png)
 
 ## Tech Stack
 
