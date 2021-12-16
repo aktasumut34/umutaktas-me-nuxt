@@ -113,8 +113,15 @@
         to="/"
       >
         <img
+          v-show="currentMode == 'light'"
           class="w-logoWidth h-logoWidth md:w-logoWidthMd md:h-logoWidthMd"
-          src="//unsplash.it/128/128"
+          src="/img/logo-light.png"
+          alt="umutaktas.me logo"
+        />
+        <img
+          v-show="currentMode == 'dark'"
+          class="w-logoWidth h-logoWidth md:w-logoWidthMd md:h-logoWidthMd"
+          src="/img/logo-dark.png"
           alt="umutaktas.me logo"
         />
       </NuxtLink>

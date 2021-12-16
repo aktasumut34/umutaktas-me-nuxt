@@ -26,16 +26,18 @@
           >
         </p>
         <div class="flex gap-2">
-          <button
-            class="bg-transparent border-pink-600 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-pink-600 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300"
+          <NuxtLink
+            :to="'/posts'"
+            class="bg-transparent border-pink-600 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-pink-600 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
             FREE LESSONS
-          </button>
-          <button
-            class="bg-transparent border-green-500 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-green-500 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300"
+          </NuxtLink>
+          <NuxtLink
+            :to="'/posts'"
+            class="bg-transparent border-green-500 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-green-500 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
             LAST POSTS
-          </button>
+          </NuxtLink>
         </div>
       </div>
       <div
@@ -43,8 +45,8 @@
       >
         <iframe
           width="600"
-          src="https://www.youtube.com/embed/bhS1TqA9emE"
-          title="YouTube video player"
+          src="https://www.youtube.com/embed/nAY0oKOWmUI"
+          title="Umut Aktaş 120 Saniyede Visual Studio Code"
           frameborder="0"
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
           allowfullscreen
@@ -227,18 +229,29 @@
       class="py-10 md:py-16 lg:py-36 px-10 md:px-14 lg:px-20 xl:px-32 2xl:px-40 flex flex-col lg:flex-row gap-6 items-stretch justify-evenly"
     >
       <div class="flex justify-center">
-        <img src="//unsplash.it/300/300" alt="" class="rounded-full" />
+        <img
+          v-show="currentMode == 'light'"
+          class="max-w-[300px]"
+          src="/img/logo-light.png"
+          alt="umutaktas.me logo"
+        />
+        <img
+          v-show="currentMode == 'dark'"
+          class="max-w-[300px]"
+          src="/img/logo-dark.png"
+          alt="umutaktas.me logo"
+        />
       </div>
       <div
         class="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center lg:justify-start gap-6"
       >
         <h3
-          class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
+          class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
         >
           🎙️ Your Host
         </h3>
         <p
-          class="font-sofia text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
+          class="font-sofia text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center lg:text-left"
         >
           Hi, I'm
           <code
@@ -269,6 +282,11 @@ export default {
     await this.fetchPosts()
     await this.fetchProjects()
     await this.fetchBasics()
+  },
+  computed: {
+    currentMode() {
+      return this.$store.state.mode
+    },
   },
   methods: {
     async fetchPosts() {
