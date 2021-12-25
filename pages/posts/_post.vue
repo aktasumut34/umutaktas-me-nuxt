@@ -32,10 +32,8 @@
         </div>
       </div>
       <template v-if="!article.error && !$fetchState.pending">
-        <div
-          class="w-full text-black dark:text-white"
-          v-html="$md.render(article.content)"
-        ></div>
+        <button @click="logMd">Yükle</button>
+        <div class="w-full text-black dark:text-white" v-html="md"></div>
         <div class="self-start mt-4 xl:mt-8">
           <h3
             class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
@@ -85,6 +83,7 @@ export default {
   data() {
     return {
       article: {},
+      md: '',
     }
   },
   async fetch() {
@@ -92,6 +91,11 @@ export default {
     await this.fetchPost()
   },
   methods: {
+    logMd() {
+      this.md = this.$md.render(this.article.content)
+      console.log(this.article.content)
+      console.log(this.md)
+    },
     async fetchPost() {
       try {
         const postSlug = this.$route.params.post || ''
