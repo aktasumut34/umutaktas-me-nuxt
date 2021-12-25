@@ -33,7 +33,7 @@
       </div>
       <template v-if="!article.error && !$fetchState.pending">
         <div
-          class="w-full text-black dark:text-white prose xl:prose-xl"
+          class="prose dark:prose-light xl:prose-xl"
           v-html="$md.render(article.content)"
         ></div>
         <div class="self-start mt-4 xl:mt-8">
