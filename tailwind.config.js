@@ -13,6 +13,13 @@ module.exports = {
   theme: {
     extend: {
       typography: (theme) => ({
+        DEFAULT: {
+          css: {
+            iframe: {
+              margin: '2em 0',
+            },
+          },
+        },
         dark: {
           css: {
             color: theme('colors.gray.300'),

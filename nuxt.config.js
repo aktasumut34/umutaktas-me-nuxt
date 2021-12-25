@@ -1,7 +1,7 @@
 export default {
   server: {
     host: '0.0.0.0',
-    port: 3000
+    port: 3000,
   },
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -66,7 +66,7 @@ export default {
     linkify: true,
     breaks: true,
     typographer: true,
-    html: false,
+    html: true,
     use: ['markdown-it-highlightjs', 'markdown-it-attrs'],
   },
 
