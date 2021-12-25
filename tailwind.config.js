@@ -11,70 +11,32 @@ module.exports = {
     ],
   }, // or 'media' or 'class'
   theme: {
-    typography: (theme) => ({
-      light: {
-        css: [
-          {
-            color: theme('colors.gray.400'),
-            '[class~="lead"]': {
+    extend: {
+      typography: (theme) => ({
+        dark: {
+          css: {
+            color: theme('colors.gray.300'),
+            p: {
               color: theme('colors.gray.300'),
             },
-            a: {
-              color: theme('colors.white'),
-            },
-            strong: {
-              color: theme('colors.white'),
-            },
-            'ol > li::before': {
-              color: theme('colors.gray.400'),
-            },
-            'ul > li::before': {
-              backgroundColor: theme('colors.gray.600'),
-            },
-            hr: {
-              borderColor: theme('colors.gray.200'),
-            },
-            blockquote: {
-              color: theme('colors.gray.200'),
-              borderLeftColor: theme('colors.gray.600'),
-            },
-            h1: {
-              color: theme('colors.white'),
+            h3: {
+              color: theme('colors.gray.100'),
             },
             h2: {
-              color: theme('colors.white'),
+              color: theme('colors.gray.100'),
             },
-            h3: {
-              color: theme('colors.white'),
+            h1: {
+              color: theme('colors.gray.100'),
             },
-            h4: {
-              color: theme('colors.white'),
-            },
-            'figure figcaption': {
+            a: {
               color: theme('colors.gray.400'),
             },
-            code: {
-              color: theme('colors.white'),
-            },
-            'a code': {
-              color: theme('colors.white'),
-            },
-            pre: {
-              color: theme('colors.gray.200'),
-              backgroundColor: theme('colors.gray.800'),
-            },
-            thead: {
-              color: theme('colors.white'),
-              borderBottomColor: theme('colors.gray.400'),
-            },
-            'tbody tr': {
-              borderBottomColor: theme('colors.gray.600'),
+            'a:hover': {
+              color: theme('colors.gray.500'),
             },
           },
-        ],
-      },
-    }),
-    extend: {
+        },
+      }),
       screens: {
         '3xl': '1920px',
       },
@@ -96,9 +58,7 @@ module.exports = {
     },
   },
   variants: {
-    extend: {
-      typography: ['dark'],
-    },
+    typography: ['dark'],
   },
   plugins: [require('@tailwindcss/typography')],
 }

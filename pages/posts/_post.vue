@@ -1,12 +1,12 @@
 <template>
   <div class="px-10 md:px-16 lg:px-36 transition-colors">
     <div
-      class="py-8 lg:py-12 2xl:py-20 mx-4 xl:mx-16 2xl:mx-32 3xl:mx-64 flex flex-col gap-6 lg:gap-8 2xl:gap-10 3xl:gap-12 items-center justify-center"
+      class="py-8 lg:py-12 2xl:py-20 mx-4 xl:mx-16 2xl:mx-32 3xl:mx-64 flex flex-col gap-6 lg:gap-8 2xl:gap-10 3xl:gap-12"
     >
       <div class="flex flex-col gap-2 items-start justify-center w-full">
         <div v-if="!$fetchState.pending && !article.error">
           <span
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-sofia uppercase text-3xl md:text-4xl text-black dark:text-white font-bold"
           >
             {{ article.name }}
           </span>
@@ -33,7 +33,7 @@
       </div>
       <template v-if="!article.error && !$fetchState.pending">
         <div
-          class="prose dark:prose-light xl:prose-xl"
+          class="prose md:prose-xl dark:prose-dark dark:md:prose-xl-dark"
           v-html="$md.render(article.content)"
         ></div>
         <div class="self-start mt-4 xl:mt-8">
