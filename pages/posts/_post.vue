@@ -91,6 +91,26 @@ export default {
     this.article = {}
     await this.fetchPost()
   },
+
+  head() {
+    if (this.article && this.article.tags) {
+      return {
+        title: this.article.name,
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content: this.article.description,
+          },
+          {
+            hid: 'keywords',
+            name: 'keywords',
+            content: this.article.tags.map((item) => item.name).join(','),
+          },
+        ],
+      }
+    }
+  },
   methods: {
     async fetchPost() {
       try {
@@ -98,7 +118,7 @@ export default {
         const res = await this.$axios.get('/articles/' + postSlug)
         this.article = res.data.article
       } catch (err) {
-        this.articles = {
+        this.article = {
           error: err,
         }
       }

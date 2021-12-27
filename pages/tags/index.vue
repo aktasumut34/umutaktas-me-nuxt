@@ -46,6 +46,18 @@ export default {
   async fetch() {
     await this.fetchTags()
   },
+
+  head: {
+    title: 'Etiketler | Umut Aktaş - Personal Blog',
+    meta: [
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'javascript, türkçe yazılım, türkçe programlama, türkçe vue eğitimi, vue dersleri, javascript dersleri',
+      },
+    ],
+  },
   methods: {
     async fetchTags() {
       try {

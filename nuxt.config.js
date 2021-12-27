@@ -8,7 +8,7 @@ export default {
   head: {
     title: 'umutaktas.me',
     htmlAttrs: {
-      lang: 'en',
+      lang: 'tr',
     },
     meta: [
       { charset: 'utf-8' },

@@ -137,6 +137,23 @@ export default {
     this.articles = []
     await this.fetchPosts()
   },
+  head() {
+    if (this.meta && this.meta.tag) {
+      return {
+        title: this.meta.tag.name + ' - Umut Aktaş',
+        meta: [
+          {
+            hid: 'description',
+            name: 'description',
+            content:
+              'Umut Aktaş tarafından yazılmış,' +
+              this.meta.tag.name +
+              ' ile ilgili yazılar.',
+          },
+        ],
+      }
+    }
+  },
   watch: {
     '$route.query.page': '$fetch',
   },

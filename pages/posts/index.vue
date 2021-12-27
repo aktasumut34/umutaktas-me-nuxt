@@ -160,6 +160,18 @@ export default {
     this.articles = []
     await this.fetchPosts()
   },
+
+  head: {
+    title: 'Yazılar | Umut Aktaş - Personal Blog',
+    meta: [
+      {
+        hid: 'keywords',
+        name: 'keywords',
+        content:
+          'javascript, türkçe yazılım, türkçe programlama, türkçe vue eğitimi, vue dersleri, javascript dersleri',
+      },
+    ],
+  },
   watch: {
     '$route.query.page': '$fetch',
     '$route.query.s': '$fetch',
