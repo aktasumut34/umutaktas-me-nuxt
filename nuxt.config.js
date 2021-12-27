@@ -28,7 +28,7 @@ export default {
   css: [{ src: '~/node_modules/highlight.js/styles/monokai.css', lang: 'css' }],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
-  plugins: [],
+  plugins: ['~/plugins/analytics.js'],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
   components: true,
