@@ -1,3 +1,4 @@
+import fetch from 'node-fetch'
 export default {
   server: {
     host: '0.0.0.0',
@@ -46,6 +47,7 @@ export default {
     // https://go.nuxtjs.dev/axios
     '@nuxtjs/axios',
     '@nuxtjs/markdownit',
+    '@nuxtjs/sitemap',
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -68,6 +70,19 @@ export default {
     typographer: true,
     html: true,
     use: ['markdown-it-highlightjs', 'markdown-it-attrs'],
+  },
+  sitemap: {
+    hostname: 'https://umutaktas.me',
+    gzip: true,
+    routes: async () => {
+      const posts = await fetch('https://umutaktas.me/api/articles')
+      const articles = await posts.json()
+      const tags = await fetch('https://umutaktas.me/api/articles/tags')
+      const tagsList = await tags.json()
+      const postRoutes = articles.articles.map((item) => `/posts/${item.slug}`)
+      const tagRoutes = tagsList.map((item) => `/tags/${item.slug}`)
+      return [...postRoutes, ...tagRoutes]
+    },
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
