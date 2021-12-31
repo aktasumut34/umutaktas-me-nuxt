@@ -8,13 +8,13 @@
           v-if="articles.length > 0 && !$fetchState.pending && !articles.error"
         >
           <span
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             <template v-if="!$route.query.s">Son Gönderiler</template>
             <template v-else>Arama Sonuçları</template>
           </span>
           <p
-            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+            class="font-montserrat uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             <template v-if="!$route.query.s"
               >Yeni gönderiler her ayın 32. günü güncellenir.</template
@@ -29,7 +29,7 @@
         </template>
         <div v-if="$fetchState.pending && !articles.error">
           <span
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderiler yükleniyor
           </span>
@@ -106,7 +106,7 @@
         </template>
         <div v-else class="w-full">
           <span
-            class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-gray-700 dark:text-gray-300"
+            class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-gray-700 dark:text-gray-300"
           >
             <span class="text-gray-900 dark:text-gray-100 text-2xl md:text-3xl">
               {{ $route.query.s }}</span
@@ -125,7 +125,7 @@
       </template>
       <div v-if="articles.error" class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small

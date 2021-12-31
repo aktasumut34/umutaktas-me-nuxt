@@ -2,7 +2,7 @@
   <div class="px-3 md:px-4 lg:px-[5vw] py-10 lg:py-16">
     <template v-if="!$fetchState.pending">
       <h3
-        class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
+        class="font-oswald uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
       >
         Etiketler
       </h3>
@@ -11,7 +11,7 @@
           v-for="tag in tags"
           :key="tag.slug"
           :to="'/tags/' + tag.slug"
-          class="px-4 py-1 font-cubano uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md"
+          class="px-4 py-1 font-oswald uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md"
           :style="{
             backgroundColor: tag.background || 'black',
             color: tag.foreground || 'white',
@@ -23,7 +23,7 @@
     </template>
     <div v-else>
       <h3
-        class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
+        class="font-oswald uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
       >
         Etiketler yükleniyor
       </h3>

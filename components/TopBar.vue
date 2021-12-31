@@ -82,26 +82,33 @@
           />
         </svg>
       </div>
-      <div class="flex-1 flex flex-col text-center justify-center gap-6">
+      <div
+        class="flex-1 flex flex-col text-center justify-center items-center gap-6"
+      >
+        <img
+          class="w-[200px] h-[200px] m-12"
+          src="/img/logo-dark.png"
+          alt="umutaktas.me logo"
+        />
         <span
-          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          class="uppercase font-oswald cursor-pointer text-4xl text-white"
           @click="go('/')"
-          >🏠 HOME</span
+          >🏠 Anasayfa</span
         >
         <span
-          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          class="uppercase font-oswald cursor-pointer text-4xl text-white"
           @click="go('/posts')"
-          >🚀 ALL POSTS</span
+          >🚀 Tüm Gönderiler</span
         >
         <span
-          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          class="uppercase font-oswald cursor-pointer text-4xl text-white"
           @click="go('/tags')"
-          >🏷 TAGS</span
+          >🏷 Etiketler</span
         >
         <span
-          class="uppercase font-cubano cursor-pointer text-4xl text-white"
+          class="uppercase font-oswald cursor-pointer text-4xl text-white"
           @click="go('/about-me')"
-          >👨‍💻 ABOUT&nbsp;ME</span
+          >👨‍💻 HAKKIMDA</span
         >
       </div>
     </div>
@@ -128,9 +135,9 @@
       <div
         class="flex-1 flex invisible md:visible text-center justify-center gap-6"
       >
-        <NuxtLink to="/posts" class="nav-text">🚀 ALL POSTS</NuxtLink>
-        <NuxtLink to="/tags" class="nav-text">🏷 TAGS</NuxtLink>
-        <NuxtLink to="/about-me" class="nav-text">👨‍💻 ABOUT&nbsp;ME</NuxtLink>
+        <NuxtLink to="/posts" class="nav-text">🚀 TÜM GÖNDERİLER</NuxtLink>
+        <NuxtLink to="/tags" class="nav-text">🏷 ETİKETLER</NuxtLink>
+        <NuxtLink to="/about-me" class="nav-text">👨‍💻 HAKKIMDA</NuxtLink>
       </div>
       <div
         class="min-w-[15vw] flex items-center justify-end pr-2 md:pr-4 gap-8"
@@ -271,7 +278,7 @@ export default {
 
 <style>
 .nav-text {
-  @apply md:text-lg lg:text-xl 2xl:text-2xl text-gray-500 hover:text-gray-900 active:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 dark:active:text-gray-200 uppercase font-cubano cursor-pointer transition-colors;
+  @apply md:text-lg lg:text-xl 2xl:text-2xl text-gray-500 hover:text-gray-900 active:text-gray-700 dark:text-gray-400 dark:hover:text-gray-100 dark:active:text-gray-200 uppercase font-oswald cursor-pointer transition-colors;
 }
 .nuxt-link-active {
   @apply text-gray-900 dark:text-gray-100;

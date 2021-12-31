@@ -6,11 +6,11 @@
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending && !articles.error">
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Son<code
               :to="'/tags/' + meta.tag.slug"
-              class="px-4 py-1 font-cubano uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md mx-2"
+              class="px-4 py-1 font-oswald uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md mx-2"
               :style="{
                 backgroundColor: meta.tag.background || 'black',
                 color: meta.tag.foreground || 'white',
@@ -20,14 +20,14 @@
             >Gönderileri
           </h3>
           <p
-            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+            class="font-montserrat uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             {{ meta.tag.description }}
           </p>
         </template>
         <div v-if="$fetchState.pending && !articles.error">
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderiler Yükleniyor
           </h3>
@@ -103,7 +103,7 @@
       </template>
       <div v-if="articles.error" class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small

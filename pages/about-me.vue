@@ -362,30 +362,30 @@
         </div>
         <div class="flex flex-col gap-8">
           <h3
-            class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+            class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
             Education
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl"
+              <span class="font-oswald text-xl xl:text-2xl"
                 >🎒 Primary School</span
               >
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Remzi Yurtsever</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl"
+              <span class="font-oswald text-xl xl:text-2xl"
                 >📓 High School</span
               >
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Borusan Asim Kocabiyik Technical High School</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">🎓 University</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">🎓 University</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Namik Kemal University, Computer Engineering</span
               >
             </div>
@@ -520,38 +520,38 @@
         </div>
         <div class="flex flex-col gap-8">
           <h3
-            class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+            class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
             Work Experience
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">Web Developer</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Has Otomotiv - Mercedes Benz Turkey (2015)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">Web Developer</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Cey Bebek, Tekirdag (2017)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">Founder</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">Founder</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 JAN Media (2018)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">Web Developer</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 Ertek Textile (2020)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-xl xl:text-2xl">Web Developer</span>
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 ARS Textile (2020 - Now)</span
               >
             </div>
@@ -626,23 +626,23 @@
         </div>
         <div class="flex flex-col gap-8">
           <h3
-            class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+            class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
             Hobbies
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 🎹 Music Production</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 🎮 Playing Video Games</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-sofia text-2xl xl:text-3xl block">
+              <span class="font-montserrat text-2xl xl:text-3xl block">
                 🏀 Playing Basketball</span
               >
             </div>
@@ -667,13 +667,13 @@
         </div>
         <div class="flex flex-col gap-8">
           <h3
-            class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+            class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
             Skills
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-blue-700 font-medium dark:text-white"
@@ -693,7 +693,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#323330] font-medium dark:text-white"
@@ -713,7 +713,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#3C873A] font-medium dark:text-white"
@@ -733,7 +733,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#35495e] font-medium dark:text-white"
@@ -753,7 +753,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#787CB5] font-medium dark:text-white"
@@ -771,7 +771,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#F05340] font-medium dark:text-white"
@@ -789,7 +789,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-[#F29111] font-medium dark:text-white"
@@ -809,7 +809,7 @@
               ></span>
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-cubano text-2xl xl:text-3xl block">
+              <span class="font-oswald text-2xl xl:text-3xl block">
                 <div class="mb-1 flex justify-between">
                   <span
                     class="text-base text-pink-600 font-medium dark:text-white"

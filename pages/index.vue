@@ -7,7 +7,7 @@
         class="w-full md:w-1/2 flex flex-col gap-8 md:gap-16 items-center md:items-start"
       >
         <h3
-          class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
+          class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
         >
           <span
             class="bg-gradient-to-r from-pink-600 to-yellow-400 bg-clip-text text-transparent"
@@ -16,7 +16,7 @@
           kişisel eğitmenin
         </h3>
         <p
-          class="font-sofia text-3xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
+          class="font-montserrat text-3xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
         >
           <code
             class="font-bold font-attributeMono bg-gradient-to-r from-pink-600 to-yellow-400 px-1 rounded-sm inline-block text-[0.85em] text-white"
@@ -27,13 +27,13 @@
         <div class="flex gap-2">
           <NuxtLink
             :to="'/tags'"
-            class="bg-transparent border-pink-600 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-pink-600 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
+            class="bg-transparent border-pink-600 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-montserrat hover:bg-pink-600 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
             İlgi Alanını Bul
           </NuxtLink>
           <NuxtLink
             :to="'/posts'"
-            class="bg-transparent border-green-500 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-green-500 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
+            class="bg-transparent border-green-500 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-montserrat hover:bg-green-500 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
             Son Gönderiler
           </NuxtLink>
@@ -60,19 +60,19 @@
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending">
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Son Gönderiler
           </h3>
           <p
-            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+            class="font-montserrat uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             Yeni gönderiler her ayın 32. günü güncellenir.
           </p>
         </template>
         <div v-else>
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderiler yükleniyor
           </h3>
@@ -100,7 +100,7 @@
       </div>
       <div v-else class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
@@ -124,19 +124,19 @@
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending">
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Yaparak Öğren
           </h3>
           <p
-            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+            class="font-montserrat uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             Programlama öğrenmenin en iyi yolu denemektir.
           </p>
         </template>
         <div v-else>
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderiler yükleniyor
           </h3>
@@ -165,7 +165,7 @@
       </div>
       <div v-else class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
@@ -189,19 +189,19 @@
       <div class="flex flex-col gap-6 items-center justify-center">
         <template v-if="!$fetchState.pending">
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Programlama Temelleri
           </h3>
           <p
-            class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
+            class="font-montserrat uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             Programlama öğrenmeye yeni mi başlıyorsun? Burası tam sana göre!
           </p>
         </template>
         <div v-else>
           <h3
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderiler yükleniyor
           </h3>
@@ -230,7 +230,7 @@
       </div>
       <div v-else class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
@@ -269,12 +269,12 @@
         class="w-full lg:w-1/2 flex flex-col items-center lg:items-start justify-center lg:justify-start gap-6"
       >
         <h3
-          class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
+          class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
         >
           🎙️ Ben Kimim?
         </h3>
         <p
-          class="font-sofia text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center lg:text-left"
+          class="font-montserrat text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center lg:text-left"
         >
           Merhaba, ben
           <code

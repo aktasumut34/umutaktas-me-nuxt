@@ -6,18 +6,18 @@
       <img :src="image" alt="" class="w-full ar object-cover"
     /></NuxtLink>
     <h3
-      class="font-cubano uppercase text-xl md:text-3xl text-black dark:text-white text-center"
+      class="font-sharktooth uppercase text-xl md:text-3xl text-black dark:text-white text-center"
     >
       {{ title }}
     </h3>
     <p
-      class="font-sofia text-md md:text-lg text-gray-700 dark:text-gray-300 text-center overflow-y-hidden max-h-[200px] font-extralight"
+      class="font-montserrat text-md md:text-lg text-gray-700 dark:text-gray-300 text-center overflow-y-hidden max-h-[200px] font-extralight"
     >
       {{ striphtml(description) }}
     </p>
     <NuxtLink
       :to="'/posts/' + slug"
-      class="text-center bg-green-500 text-white rounded-sm py-4 font-sofia hover:bg-green-600 text-sm uppercase transition-colors hover:text-gray-300 w-full mt-auto"
+      class="text-center bg-green-500 text-white rounded-sm py-4 font-montserrat hover:bg-green-600 text-sm uppercase transition-colors hover:text-gray-300 w-full mt-auto"
     >
       {{ buttonText }}
     </NuxtLink>
@@ -26,7 +26,7 @@
         v-for="tag in cTags"
         :key="tag.slug"
         :to="'/tags/' + tag.slug"
-        class="px-2 py-1 font-cubano uppercase text-sm"
+        class="px-2 py-1 font-sharktooth uppercase text-sm"
         :style="{
           backgroundColor: tag.background || 'black',
           color: tag.foreground || 'white',
@@ -51,11 +51,11 @@ export default {
     },
     description: {
       type: String,
-      default: 'description',
+      default: 'Açıklama',
     },
     buttonText: {
       type: String,
-      default: 'READ MORE',
+      default: 'Daha Fazla',
     },
     tags: {
       type: Array,

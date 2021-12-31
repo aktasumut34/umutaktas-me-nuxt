@@ -20,7 +20,10 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href: '/spinner.css' },
       { rel: 'stylesheet', href: '/scrollbar.css' },
-      { rel: 'stylesheet', href: 'https://use.typekit.net/iit5iam.css' },
+      {
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Montserrat:wght@100;300;500;700&family=Oswald:wght@200;400;600&display=swap',
+      },
     ],
     script: [{ hid: 'darkMode', src: '/dark-mode.js' }],
   },

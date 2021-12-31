@@ -1,15 +1,13 @@
 module.exports = {
   darkMode: 'class',
   mode: 'jit',
-  purge: {
-    content: [
-      `components/**/*.{vue,js}`,
-      `layouts/**/*.vue`,
-      `pages/**/*.vue`,
-      `plugins/**/*.{js,ts}`,
-      `nuxt.config.{js,ts}`,
-    ],
-  }, // or 'media' or 'class'
+  content: [
+    `components/**/*.{vue,js}`,
+    `layouts/**/*.vue`,
+    `pages/**/*.vue`,
+    `plugins/**/*.{js,ts}`,
+    `nuxt.config.{js,ts}`,
+  ], // or 'media' or 'class'
   theme: {
     extend: {
       typography: (theme) => ({
@@ -51,9 +49,8 @@ module.exports = {
         darkGray: '#2A2E35',
       },
       fontFamily: {
-        cubano: ['cubano, sans-serif'],
-        sofia: ['sofia-pro, sans-serif'],
-        attributeMono: ['attribute-mono, sans-serif'],
+        oswald: ['Oswald, sans-serif'],
+        montserrat: ['Montserrat, sans-serif'],
       },
       spacing: {
         navWidth: '60px',

@@ -6,21 +6,21 @@
       <div class="flex flex-col gap-2 items-start justify-center w-full">
         <div v-if="!$fetchState.pending && !article.error">
           <span
-            class="font-sofia uppercase text-3xl md:text-4xl text-black dark:text-white font-bold"
+            class="font-montserrat uppercase text-3xl md:text-4xl text-black dark:text-white font-bold"
           >
             {{ article.name }}
           </span>
         </div>
         <div v-if="!$fetchState.pending && !article.error">
           <span
-            class="font-sofia font-extralight uppercase text-sm md:text-base text-gray-700 dark:text-gray-300"
+            class="font-montserrat font-extralight uppercase text-sm md:text-base text-gray-700 dark:text-gray-300"
           >
             {{ humanReadableDate(article.created) }}
           </span>
         </div>
         <div v-if="$fetchState.pending && !article.error">
           <span
-            class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
             Gönderi Yükleniyor
           </span>
@@ -38,7 +38,7 @@
         ></div>
         <div class="self-start mt-4 xl:mt-8">
           <h3
-            class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
+            class="font-oswald uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
           >
             Etiketler
           </h3>
@@ -47,7 +47,7 @@
               v-for="tag in article.tags"
               :key="tag.slug"
               :to="'/tags/' + tag.slug"
-              class="px-4 py-1 font-cubano uppercase text-lg lg:text-xl rounded-md"
+              class="px-4 py-1 font-oswald uppercase text-lg lg:text-xl rounded-md"
               :style="{
                 backgroundColor: tag.background || 'black',
                 color: tag.foreground || 'white',
@@ -60,7 +60,7 @@
       </template>
       <div v-if="article.error" class="w-full">
         <span
-          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+          class="block text-center font-light font-montserrat text-xl md:text-2xl uppercase text-red-600"
         >
           Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
