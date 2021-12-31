@@ -9,34 +9,33 @@
         <h3
           class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center md:text-left"
         >
-          Your
           <span
             class="bg-gradient-to-r from-pink-600 to-yellow-400 bg-clip-text text-transparent"
-            >online</span
+            >Çevrimiçi</span
           >
-          personal trainer
+          kişisel eğitmenin
         </h3>
         <p
           class="font-sofia text-3xl md:text-2xl lg:text-3xl text-gray-700 dark:text-gray-300 text-center md:text-left"
         >
-          Here comes your first steps to
           <code
             class="font-bold font-attributeMono bg-gradient-to-r from-pink-600 to-yellow-400 px-1 rounded-sm inline-block text-[0.85em] text-white"
-            >programming</code
+            >Programlama</code
           >
+          öğrenmeye başlamanın ilk adımlarını atıyorsun
         </p>
         <div class="flex gap-2">
           <NuxtLink
-            :to="'/posts'"
+            :to="'/tags'"
             class="bg-transparent border-pink-600 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-pink-600 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
-            FREE LESSONS
+            İlgi Alanını Bul
           </NuxtLink>
           <NuxtLink
             :to="'/posts'"
             class="bg-transparent border-green-500 text-gray-700 dark:text-gray-300 border-4 rounded-sm px-4 py-2 font-sofia hover:bg-green-500 text-md uppercase hover:-translate-y-1 transition-all hover:text-gray-300 text-center"
           >
-            LAST POSTS
+            Son Gönderiler
           </NuxtLink>
         </div>
       </div>
@@ -63,19 +62,19 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            Latest Posts
+            Son Gönderiler
           </h3>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
-            New posts, updated every 32nd day of month
+            Yeni gönderiler her ayın 32. günü güncellenir.
           </p>
         </template>
         <div v-else>
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING LATEST POSTS
+            Gönderiler yükleniyor
           </h3>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -100,14 +99,22 @@
         />
       </div>
       <div v-else class="w-full">
-        <h3
-          class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+        <span
+          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load posts now. Shame on us 🙁<br /><small
-            class="text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ articles.error.code }}</small
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
+          <small
+            v-if="articles.error.code"
+            class="block text-xs text-gray-700 dark:text-gray-300"
+            >Hata Kodu: {{ articles.error.code }}</small
           >
-        </h3>
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
+            <NuxtLink to="/posts" class="text-black dark:text-white underline"
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
+          >
+        </span>
       </div>
     </div>
     <hr />
@@ -119,19 +126,19 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            Learn By Doing
+            Yaparak Öğren
           </h3>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
-            The best way to learn code is doing something
+            Programlama öğrenmenin en iyi yolu denemektir.
           </p>
         </template>
         <div v-else>
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING LATEST PROJECTS
+            Gönderiler yükleniyor
           </h3>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -157,14 +164,22 @@
         />
       </div>
       <div v-else class="w-full">
-        <h3
-          class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+        <span
+          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load latest projects now. Shame on us 🙁<br /><small
-            class="text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ projects.error.code }}</small
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
+          <small
+            v-if="projects.error.code"
+            class="block text-xs text-gray-700 dark:text-gray-300"
+            >Hata Kodu: {{ projects.error.code }}</small
           >
-        </h3>
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
+            <NuxtLink to="/posts" class="text-black dark:text-white underline"
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
+          >
+        </span>
       </div>
     </div>
     <hr />
@@ -176,19 +191,19 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            New To Development?
+            Programlama Temelleri
           </h3>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
-            Learn The Basics First.
+            Programlama öğrenmeye yeni mi başlıyorsun? Burası tam sana göre!
           </p>
         </template>
         <div v-else>
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING LATEST PROJECTS
+            Gönderiler yükleniyor
           </h3>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -214,14 +229,22 @@
         />
       </div>
       <div v-else class="w-full">
-        <h3
-          class="text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
+        <span
+          class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load latest projects now. Shame on us 🙁<br /><small
-            class="text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ basics.error.code }}</small
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
+          <small
+            v-if="basics.error.code"
+            class="block text-xs text-gray-700 dark:text-gray-300"
+            >Hata Kodu: {{ basics.error.code }}</small
           >
-        </h3>
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
+            <NuxtLink to="/posts" class="text-black dark:text-white underline"
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
+          >
+        </span>
       </div>
     </div>
     <hr />
@@ -248,18 +271,17 @@
         <h3
           class="font-cubano uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
         >
-          🎙️ Your Host
+          🎙️ Ben Kimim?
         </h3>
         <p
           class="font-sofia text-2xl xl:text-3xl text-gray-700 dark:text-gray-300 text-center lg:text-left"
         >
-          Hi, I'm
+          Merhaba, ben
           <code
             class="font-bold bg-gradient-to-r from-pink-600 to-yellow-400 px-1 rounded-sm inline-block text-[1.05em] text-white"
             >Umut Aktaş</code
-          >
-          and I'm 26 right now. My biggest passion is coding and i like teaching
-          what i know.
+          >, 26 yaşındayım. En büyük tutkum programlama öğrenmek ve bildiklerimi
+          başkalarına aktarmak.
         </p>
       </div>
     </div>

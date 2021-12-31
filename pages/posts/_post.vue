@@ -22,7 +22,7 @@
           <span
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING POST
+            Gönderi Yükleniyor
           </span>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -40,7 +40,7 @@
           <h3
             class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
           >
-            TAGS
+            Etiketler
           </h3>
           <div class="py-2 flex flex-wrap gap-4">
             <NuxtLink
@@ -62,17 +62,17 @@
         <span
           class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load post now. Shame on us 🙁
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
-            v-if="articles.error.code"
+            v-if="article.error.code"
             class="block text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ articles.error.code }}</small
+            >Hata Kodu: {{ article.error.code }}</small
           >
-          <span class="block text-gray-700 dark:text-gray-300 mt-4"
-            >Go to
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
             <NuxtLink to="/posts" class="text-black dark:text-white underline"
-              >All Posts</NuxtLink
-            ></span
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
           >
         </span>
       </div>

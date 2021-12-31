@@ -10,14 +10,14 @@
           <span
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            <template v-if="!$route.query.s">Latest Posts</template>
-            <template v-else>Search Results</template>
+            <template v-if="!$route.query.s">Son Gönderiler</template>
+            <template v-else>Arama Sonuçları</template>
           </span>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
           >
             <template v-if="!$route.query.s"
-              >New posts, updated every 32nd day of month</template
+              >Yeni gönderiler her ayın 32. günü güncellenir.</template
             >
             <template v-else
               >For:
@@ -31,7 +31,7 @@
           <span
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING POSTS
+            Gönderiler yükleniyor
           </span>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -108,17 +108,17 @@
           <span
             class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-gray-700 dark:text-gray-300"
           >
-            We cannot find a post related to
             <span class="text-gray-900 dark:text-gray-100 text-2xl md:text-3xl">
               {{ $route.query.s }}</span
             >
-            right now... Maybe you should check it yourself
+            ile ilgili bir gönderi bulamadık... Belki de kendin kontrol
+            etmelisin
             <span class="block text-9xl my-2">🤔</span>
-            <span class="block text-gray-700 dark:text-gray-300 mt-4"
-              >Go to
+            <span class="block text-gray-700 dark:text-gray-300 mt-4">
               <NuxtLink to="/posts" class="text-black dark:text-white underline"
-                >All Posts</NuxtLink
-              ></span
+                >Tüm Gönderiler</NuxtLink
+              >
+              sayfasına git</span
             >
           </span>
         </div>
@@ -127,17 +127,17 @@
         <span
           class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load posts now. Shame on us 🙁
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
             v-if="articles.error.code"
             class="block text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ articles.error.code }}</small
+            >Hata Kodu: {{ articles.error.code }}</small
           >
-          <span class="block text-gray-700 dark:text-gray-300 mt-4"
-            >Go to
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
             <NuxtLink to="/posts" class="text-black dark:text-white underline"
-              >All Posts</NuxtLink
-            ></span
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
           >
         </span>
       </div>

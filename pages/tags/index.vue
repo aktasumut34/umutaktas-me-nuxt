@@ -4,7 +4,7 @@
       <h3
         class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
       >
-        TAGS
+        Etiketler
       </h3>
       <div class="py-8 flex flex-wrap gap-4">
         <NuxtLink
@@ -25,7 +25,7 @@
       <h3
         class="font-cubano uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
       >
-        LOADING TAGS
+        Etiketler yükleniyor
       </h3>
       <div class="spinner">
         <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>

@@ -8,7 +8,7 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            Latest<code
+            Son<code
               :to="'/tags/' + meta.tag.slug"
               class="px-4 py-1 font-cubano uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md mx-2"
               :style="{
@@ -17,7 +17,7 @@
               }"
             >
               {{ meta.tag.name }} </code
-            >Posts
+            >Gönderileri
           </h3>
           <p
             class="font-mono uppercase text-sm md:text-md text-gray-700 dark:text-gray-300 font-light text-center"
@@ -29,7 +29,7 @@
           <h3
             class="font-cubano uppercase text-2xl md:text-3xl text-black dark:text-white"
           >
-            LOADING POSTS
+            Gönderiler Yükleniyor
           </h3>
           <div class="spinner">
             <div class="bounce1 bg-gray-700 dark:bg-gray-300"></div>
@@ -105,17 +105,17 @@
         <span
           class="block text-center font-light font-sofia text-xl md:text-2xl uppercase text-red-600"
         >
-          Sorry, we couldn't load posts now. Shame on us 🙁
+          Üzgünüm, şuan gönderileri yükleyemiyorum ve bu benim hatam 🙁
           <small
             v-if="articles.error.code"
             class="block text-xs text-gray-700 dark:text-gray-300"
-            >ERROR CODE: {{ articles.error.code }}</small
+            >Hata Kodu: {{ articles.error.code }}</small
           >
-          <span class="block text-gray-700 dark:text-gray-300 mt-4"
-            >Go to
+          <span class="block text-gray-700 dark:text-gray-300 mt-4">
             <NuxtLink to="/posts" class="text-black dark:text-white underline"
-              >All Posts</NuxtLink
-            ></span
+              >Tüm Gönderiler</NuxtLink
+            >
+            sayfasına git</span
           >
         </span>
       </div>
