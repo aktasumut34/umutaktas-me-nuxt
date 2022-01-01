@@ -32,7 +32,7 @@
         v-model="query"
         type="text"
         class="flex-1 bg-transparent outline-none text-2xl md:text-4xl lg:text-5xl xl:text-6xl 2xl:text-7xl text-gray-100 placeholder-gray-300"
-        placeholder="Search something"
+        placeholder="Bir şeyler ara"
         @keydown.enter="doSearch"
       />
       <div
