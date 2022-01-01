@@ -19,8 +19,7 @@
             <template v-if="!$route.query.s"
               >Yeni gönderiler her ayın 32. günü güncellenir.</template
             >
-            <template v-else
-              >For:
+            <template v-else>
               <span class="text-gray-900 dark:text-gray-100">
                 {{ $route.query.s }}</span
               ></template
@@ -165,10 +164,22 @@ export default {
     title: 'Yazılar | Umut Aktaş - Personal Blog',
     meta: [
       {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Javascript ağırlıklı programlama içerikleri ve youtube videolarımı blog şeklinde paylaştığım kişisel web sitem.',
+      },
+      {
         hid: 'keywords',
         name: 'keywords',
         content:
           'javascript, türkçe yazılım, türkçe programlama, türkçe vue eğitimi, vue dersleri, javascript dersleri',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://umutaktas.me/posts',
       },
     ],
   },

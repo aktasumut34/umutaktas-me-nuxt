@@ -51,10 +51,22 @@ export default {
     title: 'Etiketler | Umut Aktaş - Personal Blog',
     meta: [
       {
+        hid: 'description',
+        name: 'description',
+        content:
+          'Javascript ağırlıklı programlama içerikleri ve youtube videolarımı blog şeklinde paylaştığım kişisel web sitem.',
+      },
+      {
         hid: 'keywords',
         name: 'keywords',
         content:
           'javascript, türkçe yazılım, türkçe programlama, türkçe vue eğitimi, vue dersleri, javascript dersleri',
+      },
+    ],
+    link: [
+      {
+        rel: 'canonical',
+        href: 'https://umutaktas.me/tags',
       },
     ],
   },

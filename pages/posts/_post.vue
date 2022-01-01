@@ -108,6 +108,12 @@ export default {
             content: this.article.tags.map((item) => item.name).join(','),
           },
         ],
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://umutaktas.me/posts/' + this.article.slug,
+          },
+        ],
       }
     }
   },

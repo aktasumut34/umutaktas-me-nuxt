@@ -151,6 +151,12 @@ export default {
               ' ile ilgili yazılar.',
           },
         ],
+        link: [
+          {
+            rel: 'canonical',
+            href: 'https://umutaktas.me/tags/' + this.meta.tag.slug,
+          },
+        ],
       }
     }
   },
