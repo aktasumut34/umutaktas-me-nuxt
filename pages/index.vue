@@ -1,5 +1,5 @@
 <template>
-  <div class="px-10 md:px-16 lg:px-36">
+  <div class="px-4 md:px-8 lg:px-16 xl:px-36">
     <div
       class="py-10 md:py-16 lg:py-36 flex flex-col md:flex-row gap-6 items-stretch"
     >
