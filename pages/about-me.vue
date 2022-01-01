@@ -364,29 +364,25 @@
           <h3
             class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
-            Education
+            Eğitim
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-oswald text-xl xl:text-2xl"
-                >🎒 Primary School</span
-              >
+              <span class="font-oswald text-xl xl:text-2xl">🎒 İlkokul</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
                 Remzi Yurtsever</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-oswald text-xl xl:text-2xl"
-                >📓 High School</span
-              >
+              <span class="font-oswald text-xl xl:text-2xl">📓 Lise</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                Borusan Asim Kocabiyik Technical High School</span
+                Borusan Asım Kocabıyık ATL</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-oswald text-xl xl:text-2xl">🎓 University</span>
+              <span class="font-oswald text-xl xl:text-2xl">🎓 Üniversite</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                Namik Kemal University, Computer Engineering</span
+                Namık Kemal Üniversitesi, Bilgisayar Mühendisliği</span
               >
             </div>
           </div>
@@ -522,23 +518,23 @@
           <h3
             class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
-            Work Experience
+            Çalışma Tecrübesi
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                Has Otomotiv - Mercedes Benz Turkey (2015)</span
+                Has Otomotiv - Mercedes Benz Türkiye (2015)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                Cey Bebek, Tekirdag (2017)</span
+                Cey Bebek, Tekirdağ (2017)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
-              <span class="font-oswald text-xl xl:text-2xl">Founder</span>
+              <span class="font-oswald text-xl xl:text-2xl">Kurucu</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
                 JAN Media (2018)</span
               >
@@ -546,13 +542,13 @@
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                Ertek Textile (2020)</span
+                Ertek Tekstil (2020)</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-oswald text-xl xl:text-2xl">Web Developer</span>
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                ARS Textile (2020 - Now)</span
+                ARS Tekstil (2020 - Now)</span
               >
             </div>
           </div>
@@ -628,22 +624,22 @@
           <h3
             class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
-            Hobbies
+            Hobiler
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                🎹 Music Production</span
+                🎹 Müzik Prodüksiyonu</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                🎮 Playing Video Games</span
+                🎮 Video Oyunları</span
               >
             </div>
             <div class="text-center text-black dark:text-white lg:text-left">
               <span class="font-montserrat text-2xl xl:text-3xl block">
-                🏀 Playing Basketball</span
+                🏀 Basketbol</span
               >
             </div>
           </div>
@@ -669,7 +665,7 @@
           <h3
             class="font-oswald uppercase text-3xl md:text-4xl lg:text-5xl text-black dark:text-white text-center lg:text-left"
           >
-            Skills
+            Yetenekler
           </h3>
           <div class="flex flex-col gap-3">
             <div class="text-center text-black dark:text-white lg:text-left">
@@ -701,14 +697,14 @@
                   >
                   <span
                     class="text-sm font-medium text-[#323330] dark:text-white"
-                    >75%</span
+                    >90%</span
                   >
                 </div>
                 <div
                   class="w-full bg-[#323330] rounded-full h-2.5 dark:bg-gray-700"
                 >
                   <div
-                    class="bg-[#f0db4f] h-2.5 rounded-full w-[75%]"
+                    class="bg-[#f0db4f] h-2.5 rounded-full w-[90%]"
                   ></div></div
               ></span>
             </div>
