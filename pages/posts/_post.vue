@@ -36,18 +36,18 @@
           class="prose md:prose-xl dark:prose-dark dark:md:prose-xl-dark"
           v-html="$md.render(article.content)"
         ></div>
-        <div class="self-start mt-4 xl:mt-8">
+        <div class="self-start mt-4 xl:mt-8 mb-2 xl:mb-4">
           <h3
             class="font-oswald uppercase text-2xl lg:text-3xl 2xl:text-5xl text-black dark:text-white"
           >
             Etiketler
           </h3>
-          <div class="py-2 flex flex-wrap gap-4">
+          <div class="py-4 flex flex-wrap gap-4">
             <NuxtLink
               v-for="tag in article.tags"
               :key="tag.slug"
               :to="'/tags/' + tag.slug"
-              class="px-4 py-1 font-oswald uppercase text-lg lg:text-xl rounded-md"
+              class="px-4 py-1 font-oswald lowercase text-lg lg:text-xl rounded-md"
               :style="{
                 backgroundColor: tag.background || 'black',
                 color: tag.foreground || 'white',

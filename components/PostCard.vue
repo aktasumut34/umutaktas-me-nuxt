@@ -6,7 +6,7 @@
       <img :src="image" alt="" class="w-full ar object-cover"
     /></NuxtLink>
     <h3
-      class="font-sharktooth uppercase text-xl md:text-3xl text-black dark:text-white text-center"
+      class="font-oswald uppercase text-xl md:text-3xl text-black dark:text-white text-center"
     >
       {{ title }}
     </h3>
@@ -26,7 +26,7 @@
         v-for="tag in cTags"
         :key="tag.slug"
         :to="'/tags/' + tag.slug"
-        class="px-2 py-1 font-sharktooth uppercase text-sm"
+        class="px-2 py-1 font-oswald lowercase text-sm"
         :style="{
           backgroundColor: tag.background || 'black',
           color: tag.foreground || 'white',

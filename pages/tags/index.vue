@@ -11,7 +11,7 @@
           v-for="tag in tags"
           :key="tag.slug"
           :to="'/tags/' + tag.slug"
-          class="px-4 py-1 font-oswald uppercase text-xl lg:text-2xl 2xl:text-3xl rounded-md"
+          class="px-4 py-2 font-oswald lowercase text-3xl lg:text-4xl 2xl:text-5xl rounded-md"
           :style="{
             backgroundColor: tag.background || 'black',
             color: tag.foreground || 'white',
