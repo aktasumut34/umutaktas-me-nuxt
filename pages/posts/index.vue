@@ -161,7 +161,7 @@ export default {
   },
 
   head: {
-    title: 'Yazılar | Umut Aktaş - Personal Blog',
+    title: 'Yazılar | Umut Aktaş - Kişisel Blog',
     meta: [
       {
         hid: 'description',

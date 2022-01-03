@@ -48,7 +48,7 @@ export default {
   },
 
   head: {
-    title: 'Etiketler | Umut Aktaş - Personal Blog',
+    title: 'Etiketler | Umut Aktaş - Kişisel Blog',
     meta: [
       {
         hid: 'description',

@@ -832,7 +832,7 @@
 <script>
 export default {
   head: {
-    title: 'Umut Aktaş - Personal Blog',
+    title: 'Umut Aktaş - Kişisel Blog',
     meta: [
       {
         hid: 'description',
