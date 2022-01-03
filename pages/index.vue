@@ -119,6 +119,7 @@
     </div>
     <hr />
     <div
+      v-if="0"
       class="py-8 mx-4 md:mx-8 xl:mx-32 2xl:mx-64 flex flex-col gap-12 items-center justify-center"
     >
       <div class="flex flex-col gap-6 items-center justify-center">
@@ -361,7 +362,7 @@ export default {
     async fetchBasics() {
       try {
         const basicRes = await this.$axios.get(
-          '/articles?limit=2&sort=desc&tag=basic'
+          '/articles?limit=2&sort=desc&tag=temel'
         )
         this.basics = basicRes.data.articles
         this.basicsMeta = basicRes.data.meta
